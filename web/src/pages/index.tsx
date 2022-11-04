@@ -61,7 +61,7 @@ export default function Home(props: HomeProps) {
         </form>
 
         <p className="mt-4 text-sm text-gray-300 leading-relaxed">
-          pós criar seu bolão você receberá um código único que poderá usar para convidar seus amigos 🚀
+          Após criar seu bolão você receberá um código único que poderá usar para convidar seus amigos 🚀
         </p>
 
         <div className="mt-10 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100" >
