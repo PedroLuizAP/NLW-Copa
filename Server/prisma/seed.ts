@@ -11,7 +11,7 @@ async function main() {
         }
     });
 
-    const poll = await prisma.pool.create({
+    const poll = await prisma.poll.create({
         data: {
             title: "Mock Poll",
             code: "BOL123",
