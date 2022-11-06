@@ -5,7 +5,7 @@ export declare global {
             pools: undefined;
             find: undefined;
             details: {
-                is: string;
+                id: string;
             };
         }
     }
