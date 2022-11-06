@@ -10,6 +10,7 @@ import { PollCardProps } from './../components/PoolCard';
 import { Option } from './../components/Option';
 import { PoolHeader } from './../components/PoolHeader';
 import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
+import { Guesses } from "../components/Guesses";
 
 interface RouteParams {
     id: string;
@@ -64,6 +65,8 @@ export function Details() {
                         <Option title="Seus palpites" isSelected={optionSelected === "guesses"} onPress={() => setOptionSelected("guesses")}/>
                         <Option title="Ranking do grupo"isSelected={optionSelected === "ranking"} onPress={() => setOptionSelected("ranking")}/>
                     </HStack>
+
+                    <Guesses pollId={pollDetails.id}/>
                 </VStack>
                 :
                 <EmptyMyPoolList code={pollDetails.code}/>
