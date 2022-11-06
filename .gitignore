@@ -1,2 +1,3 @@
 Server/prisma/dev.db
 *.db
+mobile/.env
