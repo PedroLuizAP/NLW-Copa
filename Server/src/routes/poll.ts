@@ -139,19 +139,19 @@ export async function pollRoutes(fastify: FastifyInstance) {
         });
         console.log(polls);
         console.log("teste");
-        
+
 
         return { polls };
     });
 
-    fastify.get("/polls/:id", { onRequest: [authenticate] }, async (request) => {
+    fastify.get("/polls/:id", { onRequest: [authenticate] }, async (request, reply) => {
         const getPollsParams = z.object({
             id: z.string()
         });
 
         const { id } = getPollsParams.parse(request.params);
 
-        const polls = await prisma.poll.findUnique({
+        const poll = await prisma.poll.findUnique({
             where: {
                 id,
             },
@@ -180,6 +180,10 @@ export async function pollRoutes(fastify: FastifyInstance) {
                 }
             }
         });
+
+        if (!poll) return reply.status(400).send({ message: "Poll not find" });
+
+        return { poll };
     });
 
 }
