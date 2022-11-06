@@ -1,7 +1,7 @@
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import { Heading, HStack, Text, VStack } from 'native-base';
 
-import { Participants, ParticipantProps } from './Participants';
+import { Participant, ParticipantProps } from './Participants';
 
 export interface PollCardProps {
   id: string;
@@ -47,9 +47,9 @@ export function PoolCard({ data, ...rest }: Props) {
           </Text>
         </VStack>
 
-        <Participants
+        <Participant
           count={data._count.participant}
-          participants={data.participant}
+          participant={data.participant}
         />
       </HStack>
     </TouchableOpacity>
