@@ -14,7 +14,7 @@ export interface PollCardProps {
   },
   participant: ParticipantProps[];
   _count: {
-    participants: number;
+    participant: number;
   }
 }
 
