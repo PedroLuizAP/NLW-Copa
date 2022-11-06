@@ -108,7 +108,7 @@ export async function pollRoutes(fastify: FastifyInstance) {
             where: {
                 participant: {
                     some: {
-                        userId: "request.user.sub"
+                        userId: request.user.sub
                     }
                 }
             },
@@ -137,6 +137,9 @@ export async function pollRoutes(fastify: FastifyInstance) {
                 }
             }
         });
+        console.log(polls);
+        console.log("teste");
+        
 
         return { polls };
     });
