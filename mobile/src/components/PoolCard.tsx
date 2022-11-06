@@ -12,7 +12,7 @@ export interface PollCardProps {
   owner: {
     name: string;
   },
-  participants: ParticipantProps[];
+  participant: ParticipantProps[];
   _count: {
     participants: number;
   }
@@ -48,8 +48,8 @@ export function PoolCard({ data, ...rest }: Props) {
         </VStack>
 
         <Participants
-          count={data._count.participants}
-          participants={data.participants}
+          count={data._count.participant}
+          participants={data.participant}
         />
       </HStack>
     </TouchableOpacity>
