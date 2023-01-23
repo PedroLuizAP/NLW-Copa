@@ -7,3 +7,6 @@ EN: IF YOU ARE GOING TO START THIS APPLICATION, CREATE AN EXPO ACCOUNT TO GET YO
 PT: VOCÊ VAI PRECISAR DE SUA PROPRIA CHAVE GOOGLE E SUBSTITUIR O CLIENTID PARA PEGAR A AUTORIZAÇÃO.
 
 EN: YOU WILL NEED YOUR OWN GOOGLE KEY AND REPLACE THE CLIENTID TO GET AUTHORIZATION.
+
+### API
+If by any chance you have connection problems with the API check the address, for some reason the "localhost" address does not work within android.
